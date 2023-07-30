@@ -15,5 +15,16 @@
 <body>
     <h1>welcome to the stable</h1>
     <p>ask the yeknod</p>
+    <div>
+        <form action="#" th:action="@{/}" th:object="${text}" method="post">
+            <textarea name="text" rows="10" cols="50" th:text="${text}"></textarea>
+            <br>
+            <button type="submit">submit</button>
+        </form>
+    </div>
+    <div>
+        <h5>yeknod made IA</h5>
+        <p th:text="${response}"></p>
+    </div>
 </body>
 </html>
