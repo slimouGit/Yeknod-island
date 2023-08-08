@@ -28,7 +28,9 @@ public class YeknodController {
     @PostMapping
     public String processForm(String text, Model model) {
         model.addAttribute("text", text); // Das eingegebene Textfeld wird im Model gespeichert
-        String response = this.yeknodService.startRequest(text);
+
+            String response = this.yeknodService.startRequest(text);
+
         model.addAttribute("response", response); // Die Response des Service wird im Model gespeichert
 
         return "index";
